@@ -63,6 +63,17 @@ namespace Demo
             Console.WriteLine();
         }
 
+        public static void PrintStack(Stack<int> stack)
+        {
+            Console.WriteLine();
+            foreach (int item in stack)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+        }
+
+
 
         static void Main(string[] args)
         {
@@ -355,8 +366,33 @@ namespace Demo
             //PrintLinkedList(linkedList); 
             #endregion
 
+            #region Generic Lists : STACK
+            // Generic Lists : STACK
 
+            //Stack<int> stack = new Stack<int>();
 
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //stack.Push(5);
+            //int top = stack.Pop();
+            //Console.WriteLine(top);
+
+            //int top = stack.Peek();
+            //Console.WriteLine(top);
+
+            //stack.Peek();
+            //bool flag = stack. TryPeek(out int top);
+            //stack.Pop();
+            //bool flag = stack.TryPop(out int top);
+
+            //PrintStack(stack);
+
+            //Console.WriteLine(top);
+
+            // Undo : Ctrl + Z 
+            #endregion
 
 
 
