@@ -52,6 +52,17 @@ namespace Demo
             return Sum;
         }
 
+        public static void PrintLinkedList(LinkedList<int> linkedList)
+        {
+            Console.Write("null");
+            foreach (int item in linkedList)
+            {
+                Console.Write($" <- {item} -> ");
+            }
+            Console.WriteLine("null");
+            Console.WriteLine();
+        }
+
 
         static void Main(string[] args)
         {
@@ -286,11 +297,11 @@ namespace Demo
             //int i = employees.BinarySearch(E01, new EmployeeCompareName());
             //Console.WriteLine(i);
 
-            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+            //Console.WriteLine($"Count: {list.Count}, Capacity: {list.Capacity}");
 
             //list.EnsureCapacity(capacity: 10);
 
-            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+            //Console.WriteLine($"Count: {list.Count}, Capacity: {list.Capacity}");
 
 
             //List<int> result=list.GetRange(0, 2);
@@ -298,18 +309,51 @@ namespace Demo
             //PrintList(result);
 
             //list.Sort();
-            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+            //Console.WriteLine($"Count: {list.Count}, Capacity: {list.Capacity}");
 
             //list.TrimExcess();
             //list.TrueForAll();
-            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}"); 
+            //Console.WriteLine($"Count: {list.Count}, Capacity: {list.Capacity}"); 
             #endregion
 
+            #region Generic Lists : LinkedList
+            // Generic Lists : LinkedList
+
+            // LinkedList<>
+
+            // LinkedList
+
+            //LinkedList<int> linkedList = new LinkedList<int>();
+
+            //linkedList.AddFirst(1);
+            //linkedList.AddFirst(2);
+            ////LinkedList.AddLast(1);
+            ////LinkedList.AddLast(2);
+
+            //LinkedListNode<int> node = new LinkedListNode<int>(3);
+            //linkedList.AddLast(node);
+
+            //linkedList.AddAfter(node, 4);
+
+            //LinkedListNode<int> result = linkedList.Find(1);
+
+            //linkedList.AddBefore(result, 4);
 
 
+            //Console.WriteLine(linkedList.First.Value);
+            //Console.WriteLine(linkedList.Last.Value);
 
+            //linkedList.Clear();
 
+            //Console.WriteLine(linkedList.First.Next.Value);
 
+            //linkedList.Remove(linkedList.First);
+            //linkedList.Remove(2);
+            //linkedList.RemoveLast();
+            //linkedList.Remove(linkedList.Last);
+
+            //PrintLinkedList(linkedList); 
+            #endregion
 
 
 
