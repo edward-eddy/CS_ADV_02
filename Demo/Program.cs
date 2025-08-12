@@ -15,6 +15,20 @@ namespace Demo
             Console.WriteLine();
         }
 
+        public static int SumArrayList(ArrayList list)
+        {
+            int Sum = 0;
+            if (list is not null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i] is int)
+                        Sum += (int)list[i]; // Unboxing [ReferenceType] To [ValueType] - Unsafe
+                }
+            }
+            return Sum;
+        }
+
         static void Main(string[] args)
         {
             #region What are The Collections?
@@ -191,7 +205,21 @@ namespace Demo
             //PrintArrayList(list); 
             #endregion
 
+            #region Problems With Non-Generic Lists [ArrayList]
+            //ArrayList list = new ArrayList();
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+            //list.Add(4);
+            //list.Add(5);
 
+            ////list.Add("Hello, World!"); // Exception
+            ////list.Add(new Employee()); // Exception
+            ////list.Add(2.3); // Exception
+
+            ////int Sum = SumArrayList(list);
+            ////Console.WriteLine(Sum); 
+            #endregion
 
 
 
