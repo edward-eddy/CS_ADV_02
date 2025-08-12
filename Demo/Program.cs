@@ -29,6 +29,30 @@ namespace Demo
             return Sum;
         }
 
+        public static void PrintList<T>(List<T> values)
+        {
+            Console.WriteLine();
+            foreach (T item in values)
+            {
+                Console.Write($"{item}");
+            }
+            Console.WriteLine();
+        }
+
+        public static int SumList(List<int> list)
+        {
+            int Sum = 0;
+            if (list is not null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    Sum += list[i];
+                }
+            }
+            return Sum;
+        }
+
+
         static void Main(string[] args)
         {
             #region What are The Collections?
@@ -220,6 +244,77 @@ namespace Demo
             ////int Sum = SumArrayList(list);
             ////Console.WriteLine(Sum); 
             #endregion
+
+            #region Generic Lists : List
+            // Generic Lists : List
+            // List : Version Generic Of ArrayList
+            // List Like ArrayList Like Array : Generic - Dynamic Size
+
+            //List<int> list = new List<int>(new int[] { 1,2,3,4});
+            //List<int> list = new List<int>();
+
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+            //list.Add(4);
+            //list.Add(4);
+            //list.Add("Hello World"); // Complier
+
+            //PrintList(list);
+
+            //int Sum = SumList(list);
+
+            //Console.WriteLine(Sum);
+
+            //list.AddRange(new List<int>() {10, 20, 30, 40, 50 });
+
+            //list.AsReadOnLy();
+            //int i= list.BinarySearch(20);
+
+            //PrintList(i);
+
+            //Console.WriteLine(i);
+
+
+            //Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Salary = 12000, Age = 29 };
+            //Employee E02 = new Employee() { Id = 2, Name = "Ali", Salary = 13000, Age = 30 };
+            //Employee E03 = new Employee() { Id = 3, Name = "Omar", Salary = 15000, Age = 35 };
+            //Employee E04 = new Employee() { Id = 4, Name = "Mariam", Salary = 14000, Age = 32 };
+
+            //List<Employee> employees = new List<Employee> { E01, E02, E03, E04 };
+
+            //int i = employees.BinarySearch(E01, new EmployeeCompareName());
+            //Console.WriteLine(i);
+
+            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+
+            //list.EnsureCapacity(capacity: 10);
+
+            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+
+
+            //List<int> result=list.GetRange(0, 2);
+
+            //PrintList(result);
+
+            //list.Sort();
+            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}");
+
+            //list.TrimExcess();
+            //list.TrueForAll();
+            //Console.WriteLine(value: $"Count: {list.Count}, Capacity: {list.Capacity}"); 
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
 
 
 
